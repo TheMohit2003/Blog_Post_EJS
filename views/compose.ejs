@@ -1,0 +1,21 @@
+<%- include("./partials/header") -%>
+<h1>Compose</h1>
+<form method="post" action="/compose">
+    <!-- <div class="form-floating mb-3">
+        <label for="blogText">Title:<input type="text" name="blogTitle" id="blogTitle"></label>
+    </div>
+   <div>
+    <label for="blogText">Blog:<input type="text" name="blogText"></label>
+   </div>
+    <button type="submit" name="submit_button">Publish</button> -->
+    <div class="form-floating mb-3">
+        <label for="blogTitle">Title</label>
+        <input type="text" class="form-control" id="blogTitle" name="blogTitle">
+      </div>
+      <div class="form-floating">
+       <label for="blogContent">Blog Content</label> 
+       <textarea name="blogContent" class="form-control" placeholder="Leave a comment here" id="blogContent" rows="5" cols="20"></textarea>
+    </div>
+    <button type="submit" name="publish" class="btn btn-primary" style="margin: 1rem 0;">Publish</button>
+</form>
+<%- include("./partials/footer") -%>

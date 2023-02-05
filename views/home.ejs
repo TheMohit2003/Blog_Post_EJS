@@ -1,4 +1,20 @@
 <%- include("./partials/header") -%>
 <h1>Home</h1>
 <p><%= content %></p>
+<!-- 
+<%    for(let i =0 ; i< posts.length ;i++){  %>
+<div>
+    <h2><%= posts[i].title %></h2>
+    <p><%= posts[i].blogContent %></p>
+</div>
+<%    } %> -->
+
+<%    posts.forEach(element=>{  %>
+        <div>
+            <h2><%= element.title %></h2>
+            <p><%= element.blogContent.substring(0,100)+"..."%></p>
+           <a href="/posts/<%=element.title%>">ReadMore</a>  
+        </div>
+<%    })  %>
+
 <%- include("./partials/footer") -%>
